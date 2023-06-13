@@ -1,38 +1,19 @@
 package com.example.giftchanger;
 
-public class Present {  //просто класс
-    private String name;
+import java.io.Serializable;
+
+public class Present implements Serializable {  //просто класс
+    private String age;
     private String price;
-    private String fame;
-    private int presentResource;
+    private String gender;
 
-    public Present(String name, String price, String fame, int presentResource) {
-        this.name = name;
-        this.price = price;
-        this.fame = fame;
-        this.presentResource = presentResource;
+
+    public String getAge() {
+        return age;
     }
 
-    public int getPresentResource() {
-        return presentResource;
-    }
-
-    public void setPresentResource(int presentResource) {
-        this.presentResource = presentResource;
-    }
-
-    public Present(String name, String price, String fame) {
-        this.name = name;
-        this.price = price;
-        this.fame = fame;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public void setAge(String age) {
+        this.age = age;
     }
 
     public String getPrice() {
@@ -43,11 +24,18 @@ public class Present {  //просто класс
         this.price = price;
     }
 
-    public String getFame() {
-        return fame;
+    public String getGender() {
+        return gender;
     }
 
-    public void setFame(String fame) {
-        this.fame = fame;
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public Present(String age, String price, String gender) {
+        this.age = age;
+        this.price = price;
+        this.gender = gender;
+
     }
 }

@@ -32,10 +32,9 @@ public class presentAdapter extends RecyclerView.Adapter<presentAdapter.ViewHold
     @Override
     public void onBindViewHolder(@NonNull presentAdapter.ViewHolder holder, int position) {
         Present present=presents.get(position);
-        holder.presentView.setImageResource(present.getPresentResource());
-        holder.nameView.setText(present.getName());
+        holder.nameView.setText(present.getAge());
         holder.priceView.setText(present.getPrice());
-        holder.fameView.setText(present.getFame());
+        holder.fameView.setText(present.getGender());
     }
 
     @Override
